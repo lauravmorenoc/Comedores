@@ -6,6 +6,6 @@ Uno de los servicios que se busca mejorar por medio del proyecto "Campus Intelig
 ## Primera solución presentada
 
 La siguiente imagen resume los aspectos anteriormente mencionados
-<p align="center">
+
 ![image](https://user-images.githubusercontent.com/42346349/164592938-badd7a5b-1d31-4907-a84e-91a6d5064e07.png)
-</p>
+
