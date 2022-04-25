@@ -27,3 +27,47 @@ Se suele encontrar también las marcas green y PB free, puestas por los producto
 
 ### Directiva de Residuos de Aparatos Eléctricos y Electrónicos (Waste Electrical and Electronic Equipment, WEEE)
 La WEEE es una directiva del Parlamento Europeo y del Consejo de la Unión Europea (2012/19/UE) sobre la restricción del uso de ciertas sustancias peligrosas en aparatos eléctricos y electrónicos. La intención de la directiva es reducir los residuos de aparatos eléctricos y electrónicos, aumentar la recuperación mediante el reciclaje y mejorar el proceso medioambiental de los fabricantes. La directiva se concentra específicamente en los aparatos dependientes de corrientes eléctricas o campos electromagnéticos para que funcionen debidamente y se diseñan para utilizar con una tensión nominal que no supere los 1000 voltios AC y 1500 voltios DC.
+
+## regulaciones respecto al uso del espectro electromagnético.
+
+### Espectro electromagnético
+Es la distribución energética del conjunto de las ondas electromagnéticas, yendo desde la longitud de onda más grande, a la longitud de onda más pequeña (o desde la frecuencia más baja, a la frecuencia más alta).
+
+![image](https://user-images.githubusercontent.com/53307677/165181135-9d44c546-fc16-47d2-9d70-35a60384aaf6.png)
+
+Uno de los usos principales del espectro son las telecomunicaciones, y por esta razón está regulado por el gobierno la radiación, distribución y recepción de las diferentes frecuencias.
+
+Respecto al espectro hay algunas regulaciones que es pertinente mencionar en relación al proyecto.
+
+### Regulaciones
+_Basado en el decreto 1078 de 2015 y la resolución 711 de 2016 de la ANE (Agencia Nacional del Espectro)_
+
+#### Frecuencias para aplicaciones industriales, científicas y médicas (ICM)
+Funcionamiento de equipos o de instalaciones destinados a producir y utilizar, en un espacio reducido, energía radioeléctrica con fines industriales, científicos y médicos, domésticos o similares, con exclusión de todas las aplicaciones de telecomunicación. Se muestran en la siguiente tabla:
+
+![image](https://user-images.githubusercontent.com/53307677/165184556-c45f08e7-4d3e-46c4-bc27-84e4e1fdf2e2.png)
+
+Estas frecuencias pueden ser usadas para radiocomunicaciones de corto alcance (RCA), pero el usuario deben aceptar la potencial interferencia que se puede producir.
+
+#### Frecuencias restringidas
+
+Con el fin de evitar posibles interferencias a comunicaciones radioeléctricas sensibles tales como radionavegación aeronáutica, radioastronomía, operaciones de búsqueda y rescate y comunicaciones móviles, entre otras, los dispositivos de radiocomunicaciones de corto alcance y baja potencia (RCA) no podrán funcionar en las bandas descritas en la siguiente tabla:
+
+![image](https://user-images.githubusercontent.com/53307677/165185038-ade79a78-de73-4439-bc24-f64958629c43.png)
+
+#### Límites para radiadores intencionales
+
+Radiador intencional: Persona con interés en hacer algún tipo de transmisión usando el espectro._
+
+A menos de estar incluido en alguna de las excepciones, las emisiones de cualquier radiador intencional no deberán superar los niveles de intensidad de campo que se especifican en la siguiente tabla:
+
+![image](https://user-images.githubusercontent.com/53307677/165185373-73d55607-cff1-4d1b-a7e3-0eb47065431a.png)
+
+#### Antenas
+
+No se permite la operación de dispositivos con antenas diferentes a las suministradas o recomendadas por el fabricante, así mismo, no se pueden usar antenas que permitan que el sistema exceda los límites de potencia o campo eléctrico establecidos por regulación.
+
+
+
+
+
