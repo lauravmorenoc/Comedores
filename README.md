@@ -35,7 +35,16 @@ Es la distribución energética del conjunto de las ondas electromagnéticas, ye
 
 ![image](https://user-images.githubusercontent.com/53307677/165181135-9d44c546-fc16-47d2-9d70-35a60384aaf6.png)
 
-Uno de los usos principales del espectro son las telecomunicaciones, y por esta razón está regulado por el gobierno la radiación, distribución y recepción de las diferentes frecuencias.
+Uno de los usos principales del espectro son las telecomunicaciones, y por esta razón está regulado por el gobierno la radiación, distribución y recepción de las diferentes frecuencias. Las bandas varían dependiendo de la frecuencia/longitud de onda en varios grupos estándar:
+
+![image](https://user-images.githubusercontent.com/53307677/165190506-8a87c229-9d89-4ada-bd16-37f7b44c1ff5.png)
+
+![image](https://user-images.githubusercontent.com/53307677/165190552-462a905f-6def-433a-ba32-0a7f03e72b44.png)
+
+Comparando los diferentes estándares se ven de la siguiente forma:
+
+![image](https://user-images.githubusercontent.com/53307677/165190688-2efebd54-6e31-4d06-9fbb-e94348d03b4c.png)
+
 
 Respecto al espectro hay algunas regulaciones que es pertinente mencionar en relación al proyecto.
 
@@ -55,19 +64,39 @@ Con el fin de evitar posibles interferencias a comunicaciones radioeléctricas s
 
 ![image](https://user-images.githubusercontent.com/53307677/165185038-ade79a78-de73-4439-bc24-f64958629c43.png)
 
-#### Límites para radiadores intencionales
+#### Radiador intencional/radio aficionado
+_Radiador intencional: Persona con interés en hacer algún tipo de transmisión usando el espectro._
+_Radioaficionado: Persona con interés no comercial de hacer algún tipo de transmisión usando el espectro_
 
-Radiador intencional: Persona con interés en hacer algún tipo de transmisión usando el espectro._
+Para usar el espectro de forma comercial, la persona/entidad debe registrarse en el registro único del MINTIC, y ya que el uso será comercial, deben pagar contraprestaciones (impuestos) por el uso del espectro.
+
+Los radioaficionados pueden usar el espectro sin pagar contraprestaciones. existen tres tipos de licencias para radioaficionados:
+
+- Segunda o de Novicio
+- Primera o de Experto
+- Avanzada
+
+#### Límites para radiadores intencionales o radio aficionados
 
 A menos de estar incluido en alguna de las excepciones, las emisiones de cualquier radiador intencional no deberán superar los niveles de intensidad de campo que se especifican en la siguiente tabla:
 
 ![image](https://user-images.githubusercontent.com/53307677/165185373-73d55607-cff1-4d1b-a7e3-0eb47065431a.png)
 
+A su vez estas son las restricciones de bandas y tipo de emisión:
+
+![image](https://user-images.githubusercontent.com/53307677/165189704-91ec2959-8c4d-411b-b516-0ce21c084a2c.png)
+
+![image](https://user-images.githubusercontent.com/53307677/165189840-eb1a8c88-f0d2-4ff2-9a39-3eea294bc52e.png)
+
+
 #### Antenas
 
 No se permite la operación de dispositivos con antenas diferentes a las suministradas o recomendadas por el fabricante, así mismo, no se pueden usar antenas que permitan que el sistema exceda los límites de potencia o campo eléctrico establecidos por regulación.
 
+#### Referencias
 
+https://www.suin-juriscol.gov.co/viewDocument.asp?id=30019521
+https://normograma.mintic.gov.co/mintic/docs/pdf/resolucion_ane_0711_2016.pdf
 
 
 
