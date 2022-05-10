@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "Button_1825910-6")(type "KiCad")(uri "C:/Users/Sebastian Leon/Desktop/Librerias/Button_1825910-6")(options "")(descr ""))
+  (lib (name "SMBJ5383B")(type "KiCad")(uri "C:/Users/Sebastian Leon/Desktop/Librerias/SMBJ5383B")(options "")(descr ""))
+  (lib (name "KiCad")(type "KiCad")(uri "C:/Users/Sebastian Leon/Desktop/Librerias/TP5410/KiCad")(options "")(descr ""))
+)

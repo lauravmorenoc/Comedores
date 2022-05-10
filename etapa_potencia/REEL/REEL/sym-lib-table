@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "1825910-6")(type "Legacy")(uri "C:/Users/Sebastian Leon/Desktop/Librerias/Button_1825910-6/1825910-6.lib")(options "")(descr ""))
+  (lib (name "FT232")(type "KiCad")(uri "C:/Users/Sebastian Leon/Desktop/Librerias/FT232R/FT232.kicad_sym")(options "")(descr ""))
+)
