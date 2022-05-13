@@ -128,7 +128,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 0125d785-8b44-4fd9-b3e5-01e62848d8f8)
-    (at 159.19 34.14 90)
+    (at 145.49 34.14 90)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -170,7 +170,7 @@
 
   (footprint "Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 066997e6-fef5-452c-baad-5dc89a0b02d7)
-    (at 150.29 32.6 90)
+    (at 136.59 32.6 90)
     (descr "Resistor SMD 1218 (3246 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: https://www.vishay.com/docs/20035/dcrcwe3.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -212,7 +212,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 09ffc209-cab3-476a-8042-3364ede2d06f)
-    (at 155.51 27.33)
+    (at 141.81 27.33)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -254,7 +254,7 @@
 
   (footprint "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" (layer "F.Cu")
     (tedit 59FF0306) (tstamp 159580e2-2af1-442e-866d-7efec9cf57fa)
-    (at 218.44 55.88 -90)
+    (at 204.74 55.88 -90)
     (descr "Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf")
     (tags "Altech AK300 terminal block pitch 5.0mm")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -382,7 +382,7 @@
 
   (footprint "Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 18642b3f-daa9-425f-9ca8-2e609ae73b90)
-    (at 162.99 39.49 90)
+    (at 149.29 39.49 90)
     (descr "Resistor SMD 1218 (3246 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: https://www.vishay.com/docs/20035/dcrcwe3.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -424,7 +424,7 @@
 
   (footprint "Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 1b9eadc5-41dd-4b90-8b10-8bb67ad83405)
-    (at 150.29 38.49 90)
+    (at 136.59 38.49 90)
     (descr "Resistor SMD 1218 (3246 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: https://www.vishay.com/docs/20035/dcrcwe3.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -466,7 +466,7 @@
 
   (footprint "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 5A19A429) (tstamp 1c98a6d1-3cd3-4dd5-afdb-3f684c4d9771)
-    (at 181.34 53.925)
+    (at 167.64 53.925)
     (descr "Through hole straight socket strip, 1x04, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x04 2.54mm single row")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -517,7 +517,7 @@
 
   (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 2265849b-786a-4edc-a6d6-02f282376a8a)
-    (at 155.56 38.43 90)
+    (at 141.86 38.43 90)
     (descr "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -559,7 +559,7 @@
 
   (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 2973b310-913c-4950-b2cc-25dabe2f95dc)
-    (at 143.41 33.35 90)
+    (at 129.71 33.35 90)
     (descr "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -601,7 +601,7 @@
 
   (footprint "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" (layer "F.Cu")
     (tedit 59FF0306) (tstamp 4de494e1-95da-42cb-a776-750d48168637)
-    (at 160.02 58.42 90)
+    (at 146.32 58.42 90)
     (descr "Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf")
     (tags "Altech AK300 terminal block pitch 5.0mm")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -729,7 +729,7 @@
 
   (footprint "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 5A19A420) (tstamp 68aee682-b431-428c-ae13-61a067c315b2)
-    (at 181.34 30.48)
+    (at 167.64 30.48)
     (descr "Through hole straight socket strip, 1x08, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x08 2.54mm single row")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -788,7 +788,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 6be64478-2778-4596-ad4b-2032c43db290)
-    (at 146.01 27.33)
+    (at 132.31 27.33)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -830,7 +830,7 @@
 
   (footprint "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 5A19A433) (tstamp 752d97a3-6c84-4906-9736-7db6bb74764b)
-    (at 220.98 30.48)
+    (at 207.28 30.48)
     (descr "Through hole straight socket strip, 1x07, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x07 2.54mm single row")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -887,7 +887,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 83fb10d9-f49e-400a-befa-d39f92c66d7b)
-    (at 150.76 27.33)
+    (at 137.06 27.33)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -929,7 +929,7 @@
 
   (footprint "RF_Module:ESP32-WROOM-32" (layer "F.Cu")
     (tedit 61D4B4ED) (tstamp 8e1516b7-13b0-4fd7-9fbe-a7e03f2019c1)
-    (at 201.66 41.395)
+    (at 187.96 41.395)
     (descr "Single 2.4 GHz Wi-Fi and Bluetooth combo chip https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf")
     (tags "Single 2.4 GHz Wi-Fi and Bluetooth combo  chip")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -1091,10 +1091,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 187.66 31.425)
-          (xy 215.66 31.425)
-          (xy 215.66 20.645)
-          (xy 187.66 20.645)
+          (xy 173.96 31.425)
+          (xy 201.96 31.425)
+          (xy 201.96 20.645)
+          (xy 173.96 20.645)
         )
       )
     )
@@ -1107,7 +1107,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp a61c2530-62c1-4845-8109-ea4ca1964e9b)
-    (at 154.94 33.02 90)
+    (at 141.24 33.02 90)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -1149,7 +1149,7 @@
 
   (footprint "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 5A19A433) (tstamp b2d17498-03cd-4659-8d3b-a1cda290643e)
-    (at 190.5 60.96 90)
+    (at 176.8 60.96 90)
     (descr "Through hole straight socket strip, 1x07, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x07 2.54mm single row")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -1206,7 +1206,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp c18151a9-39fb-4d72-af5b-ec3210c23d92)
-    (at 160.26 27.33)
+    (at 146.56 27.33)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -1248,7 +1248,7 @@
 
   (footprint "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P25.40mm_Horizontal" (layer "F.Cu")
     (tedit 5AE5139B) (tstamp c53b4b0b-1705-46d7-9ad1-5a7ddc1ff43c)
-    (at 145.21 23.48)
+    (at 131.51 23.48)
     (descr "Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=25.4mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0309 series Axial Horizontal pin pitch 25.4mm 0.5W = 1/2W length 9mm diameter 3.2mm")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -1296,7 +1296,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 59FED5CC) (tstamp de94c338-0441-4a0f-9a4a-3cf218848e15)
-    (at 144.78 48.26)
+    (at 131.08 48.26)
     (descr "Through hole straight pin header, 1x06, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x06 2.54mm single row")
     (property "Sheetfile" "REEL.kicad_sch")
@@ -2140,10 +2140,10 @@
     )
   )
 
-  (gr_line (start 137.16 68.58) (end 137.16 17.78) (layer "Dwgs.User") (width 0.15) (tstamp 07a4fb08-9cc1-4132-a9cb-4cca22087505))
-  (gr_line (start 228.6 17.78) (end 228.6 68.58) (layer "Dwgs.User") (width 0.15) (tstamp 1b20d4ed-71e3-4cc7-ba6f-b1fe87cdb4a0))
-  (gr_line (start 137.16 17.78) (end 228.6 17.78) (layer "Dwgs.User") (width 0.15) (tstamp 63d64ad2-c5a4-481c-9e23-35e50f56c25b))
-  (gr_line (start 228.6 68.58) (end 137.16 68.58) (layer "Dwgs.User") (width 0.15) (tstamp fef2bdc0-ba90-40f3-b99b-e51a6c71931f))
+  (gr_line (start 123.46 68.58) (end 123.46 17.78) (layer "Dwgs.User") (width 0.15) (tstamp 07a4fb08-9cc1-4132-a9cb-4cca22087505))
+  (gr_line (start 214.9 17.78) (end 214.9 68.58) (layer "Dwgs.User") (width 0.15) (tstamp 1b20d4ed-71e3-4cc7-ba6f-b1fe87cdb4a0))
+  (gr_line (start 123.46 17.78) (end 214.9 17.78) (layer "Dwgs.User") (width 0.15) (tstamp 63d64ad2-c5a4-481c-9e23-35e50f56c25b))
+  (gr_line (start 214.9 68.58) (end 123.46 68.58) (layer "Dwgs.User") (width 0.15) (tstamp fef2bdc0-ba90-40f3-b99b-e51a6c71931f))
   (gr_line (start 17.78 68.58) (end 17.78 17.78) (layer "Edge.Cuts") (width 0.1) (tstamp 8c51fbcd-77cf-4424-ac58-251948335a59))
   (gr_line (start 17.78 17.78) (end 109.22 17.78) (layer "Edge.Cuts") (width 0.1) (tstamp a23ec95d-0d36-4bc0-a8ac-1bfc7ef5ac6e))
   (gr_line (start 109.22 17.78) (end 109.22 68.58) (layer "Edge.Cuts") (width 0.1) (tstamp af165b73-0c29-4f9a-b418-1f60ca952f6a))
@@ -2154,5 +2154,19 @@
   (gr_text "Parte posterior" (at 60.96 73.66) (layer "Dwgs.User") (tstamp d64d3e16-b478-4a47-945b-8f59db69c0c9)
     (effects (font (size 3 3) (thickness 0.15)))
   )
+
+  (via (at 106.68 22.86) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp 0da7e2aa-d9f3-4593-ac1b-d89c546ab178))
+  (via (at 106.68 25.4) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp 30134960-62b7-46de-97b1-73a11e3e05a7))
+  (via (at 104.14 20.32) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp 4f483546-5fe1-407e-aca5-4726d4b59bdf))
+  (via (at 81.28 66.04) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp 4fc9de57-db53-4765-a283-4ab5d54b31ca))
+  (via (at 81.28 63.5) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp 76d746f4-3f58-4c51-b2a3-c1e775832b8f))
+  (via (at 104.14 22.86) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp 7c11a07f-525c-45a7-9ad1-361ea90615cc))
+  (via (at 106.68 22.86) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp 8b31a9ad-c09d-47b9-beaa-1384fac3ffb7))
+  (via (at 106.68 20.32) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp adad9755-afe1-4118-bfb8-41d502969aa3))
+  (via (at 83.82 66.04) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp b0c8d4da-76f3-4ccc-b25a-47e4bbfa1923))
+  (via (at 86.36 66.04) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp df4f4040-e068-4ce3-96d0-0cff8393069f))
+  (via (at 86.36 63.5) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp f03478ba-f8e8-4ce7-a1fa-dca7b15de97a))
+  (via (at 83.82 63.5) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp f467e92c-cfec-45d6-9135-43909aa23e31))
+  (via (at 104.14 25.4) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 0) (tstamp fa79abb7-df1b-43f8-b136-f19ec7e0d640))
 
 )
