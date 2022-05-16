@@ -1018,7 +1018,6 @@
     )
   )
 
-
   (junction (at 43.18 161.29) (diameter 0) (color 0 0 0 0)
     (uuid 1c870ee5-79ce-4141-839a-520ed084cdc9)
   )
@@ -1998,10 +1997,10 @@
     (property "Reference" "C13" (id 0) (at 140.8684 101.981 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "" (id 1) (at 138.557 101.981 0)
+    (property "Value" "100n" (id 1) (at 138.557 101.981 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 135.89 100.0252 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 135.89 100.0252 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 139.7 99.06 0)
@@ -2091,7 +2090,7 @@
     (property "Value" "10k" (id 1) (at 190.373 129.032 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 189.23 132.588 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (id 2) (at 189.23 132.588 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 189.23 130.81 0)
@@ -2158,7 +2157,7 @@
     (property "Value" "470" (id 1) (at 200.787 145.288 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 201.93 141.732 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (id 2) (at 201.93 141.732 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 201.93 143.51 0)
@@ -2486,12 +2485,12 @@
     (property "Datasheet" "" (id 3) (at 266.7 137.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f4f8))
-    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f4f8))
-    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f4f8))
-    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f4f8))
-    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f4f8))
-    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f4f8))
+    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f511))
+    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f511))
+    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f511))
+    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f511))
+    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f511))
+    (pin "" (uuid 1dabe416-3c9a-40a6-b308-c1be0b30f511))
   )
 
   (symbol (lib_id "power:+3.3V") (at 180.34 129.54 0) (unit 1)
@@ -2743,7 +2742,7 @@
     (uuid f6a6bfff-ba8e-4d48-9e4e-6c22053fc6fc)
     (property "Reference" "SW3" (id 0) (at 214.63 135.89 0))
     (property "Value" "SW_Push" (id 1) (at 214.63 138.43 0))
-    (property "Footprint" "" (id 2) (at 214.63 138.43 0)
+    (property "Footprint" "Button_Switch_SMD:SW_SPST_EVQQ2" (id 2) (at 214.63 138.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 214.63 138.43 0)
@@ -2884,7 +2883,7 @@
       (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/a15da288-795e-497a-8e6b-e8012bc97551"
-      (reference "BT1") (unit 1) (value "Battery_Cell") (footprint "Battery:BatteryHolder_Bulgin_BX0036_1xC")
+      (reference "BT1") (unit 1) (value "Battery_Cell") (footprint "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/39e5100f-b93c-4f03-87cc-9280a7807294"
       (reference "C1") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
@@ -2905,10 +2904,10 @@
       (reference "C6") (unit 1) (value "22u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/3440893e-dd5e-44a2-9a99-1d8a5c359996"
-      (reference "C7") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
+      (reference "C7") (unit 1) (value "22u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/9cc770d7-d3ea-4e39-94f0-5f75124434c2"
-      (reference "C8") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
+      (reference "C8") (unit 1) (value "22u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
     )
     (path "/a575abf6-6e95-48c3-8e55-35929dca1647"
       (reference "C9") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
@@ -2924,6 +2923,12 @@
     )
     (path "/1022811a-517d-4767-ae87-752d858f22f9"
       (reference "C13") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+    )
+    (path "/05689d2f-cd22-43d5-af77-23d23536e452/9c06488a-e7bc-409e-8b31-f9e814d13255"
+      (reference "C14") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
+    )
+    (path "/05689d2f-cd22-43d5-af77-23d23536e452/9c8dc7da-839b-4553-b608-bf9b4656fdb8"
+      (reference "C_k1") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/35a78d65-1e29-46bd-8b55-7351f4af17d9"
       (reference "D1") (unit 1) (value "Green") (footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
@@ -2950,7 +2955,10 @@
       (reference "J5") (unit 1) (value "USB_B_Mini") (footprint "Connector_USB:USB_Mini-B_AdamTech_MUSB-B5-S-VT-TSMT-1_SMD_Vertical")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/aab30d57-8d85-47c7-ae63-d2d45eadd0c3"
-      (reference "L1") (unit 1) (value "10u") (footprint "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder")
+      (reference "L1") (unit 1) (value "10u") (footprint "Inductor_SMD:L_6.3x6.3_H3")
+    )
+    (path "/05689d2f-cd22-43d5-af77-23d23536e452/77006be8-e871-4875-98bd-df9b9f9c71da"
+      (reference "L2") (unit 1) (value "33u") (footprint "Inductor_SMD:L_6.3x6.3_H3")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/ef1a709c-9475-46da-a092-4fc32162d398"
       (reference "R1") (unit 1) (value "1") (footprint "Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder")
