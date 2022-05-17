@@ -793,7 +793,6 @@
     )
   )
 
-
   (junction (at 93.98 73.66) (diameter 0) (color 0 0 0 0)
     (uuid 10934efb-a584-49f1-94d8-1012813a3248)
   )
@@ -1489,8 +1488,8 @@
     (in_bom yes) (on_board yes)
     (uuid 716c5681-6ed0-407e-890b-5db8bd8d5484)
     (property "Reference" "U4" (id 0) (at 236.22 71.3232 0))
-    (property "Value" "" (id 1) (at 236.22 73.6346 0))
-    (property "Footprint" "" (id 2) (at 236.22 72.39 0)
+    (property "Value" "AMS1117-3.3" (id 1) (at 236.22 73.6346 0))
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (id 2) (at 236.22 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf" (id 3) (at 238.76 83.82 0)
@@ -1741,7 +1740,7 @@
     (property "Reference" "#PWR026" (id 0) (at 209.55 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "" (id 1) (at 209.931 73.0758 0))
+    (property "Value" "+5V" (id 1) (at 209.931 73.0758 0))
     (property "Footprint" "" (id 2) (at 209.55 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
