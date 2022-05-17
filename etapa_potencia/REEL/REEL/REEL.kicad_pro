@@ -122,7 +122,7 @@
         0.0,
         0.1,
         0.25,
-        1.0
+        0.7
       ],
       "via_dimensions": [
         {
@@ -132,6 +132,10 @@
         {
           "diameter": 0.6,
           "drill": 0.2
+        },
+        {
+          "diameter": 1.4,
+          "drill": 0.6
         }
       ],
       "zones_allow_external_fillets": false,
@@ -407,7 +411,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "./",
-      "specctra_dsn": "../../../../../9no. semestre/Diseño/REEL_prueba3.dsn",
+      "specctra_dsn": "../../../../../9no. semestre/Diseño/REEL_YES.dsn",
       "step": "",
       "vrml": ""
     },
