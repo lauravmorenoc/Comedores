@@ -2564,8 +2564,8 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid bf82bd02-e1c6-44ee-9add-c1a616799e9b)
     (property "Reference" "J6" (id 0) (at 194.945 36.83 0))
-    (property "Value" "" (id 1) (at 194.945 39.37 0))
-    (property "Footprint" "" (id 2) (at 194.31 41.91 0)
+    (property "Value" "Salida_audio" (id 1) (at 194.945 39.37 0))
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" (id 2) (at 194.31 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 194.31 41.91 0)
@@ -2908,7 +2908,7 @@
       (reference "J5") (unit 1) (value "USB_B_Mini") (footprint "Connector_USB:USB_Mini-B_AdamTech_MUSB-B5-S-VT-TSMT-1_SMD_Vertical")
     )
     (path "/bf82bd02-e1c6-44ee-9add-c1a616799e9b"
-      (reference "J6") (unit 1) (value "Conn_01x02_Male") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical")
+      (reference "J6") (unit 1) (value "Salida_audio") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical")
     )
     (path "/05689d2f-cd22-43d5-af77-23d23536e452/aab30d57-8d85-47c7-ae63-d2d45eadd0c3"
       (reference "L1") (unit 1) (value "10u") (footprint "Inductor_SMD:L_6.3x6.3_H3")
