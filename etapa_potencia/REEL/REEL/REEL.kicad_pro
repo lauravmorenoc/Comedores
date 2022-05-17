@@ -387,7 +387,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "./",
-      "specctra_dsn": "../../../REEL_prueba.dsn",
+      "specctra_dsn": "../../../../../../../REEL_prueba.dsn",
       "step": "",
       "vrml": ""
     },
