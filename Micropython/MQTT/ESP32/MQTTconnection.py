@@ -8,7 +8,7 @@ import json
 client_id = "ESP32"
 #mqtt_server = "778209500d2e429395808690733dbd2a.s1.eu.hivemq.cloud"
 mqtt_server = "broker.mqttdashboard.com"
-user_mqtt = "JuanFelipe"
+user_mqtt = "LauraM"
 password_mqtt = "xr8_G!pQiw2R6fC"
 
 #topic_sub = b'notification'
@@ -43,7 +43,7 @@ def sub_cb(topic, msg):
         #print('El mensaje es del tema %s,  mensaje %s',topic,msg)
         print(msg_dec)
     else:
-        print('No llegó nada unu')
+        print('No llegó nada')
 
 def connect_and_subscribe():
     global client_id, mqtt_server
@@ -51,6 +51,6 @@ def connect_and_subscribe():
     client.connect()
     client.set_callback(sub_cb)
     client.subscribe(b'SI/Validar',1)
-    client.subscribe(b'SI/Easyrun/#',1)
+    client.subscribe(b'SI/Easymeals/#',1)
     print('Connected to %s MQTT broker' % (mqtt_server))
     return client

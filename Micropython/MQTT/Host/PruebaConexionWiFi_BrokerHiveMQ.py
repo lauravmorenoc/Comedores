@@ -3,14 +3,21 @@ import json
 import paho.mqtt.client as paho
 from paho import mqtt
 
-ID = ['CH10537T','Cjadgyieb','wdbhef']
+# Communication test
+ID = ['CC10100','CC65345','CC31178']
 m = {
-    "1": "Hola",
-    "2": "Si",
-    "3": "Sonido"
+    "1": "CC10100",
+    "2": "Laura",
+    "3": "Estudiante"
 }
-m2_bytes = b'[\'Hola\',\'bien\']'
+
+t = {
+    "1": "16", # current turn
+}
+m2_bytes = b'[\'Prueba\',\'bytes\']'
 m2 = m2_bytes.decode('utf8').replace("'", '"')
+
+# End communication test
 
 # setting callbacks for different events to see if it works, print the message etc.
 def on_connect(client, userdata, flags, rc, properties=None):
@@ -30,15 +37,14 @@ def on_message(client, userdata, msg):
     if msg.topic == 'SI/Validar':
         if str(msg.payload.decode()) in ID:
             print("Si está en la base de datos")
-            (rc, mid)= client.publish(msg.topic,json.dumps(m),qos = 1)
-        else: 
+            (rc, mid)= client.publish(msg.topic,json.dumps(m),qos = 1) # Returns m dictionary
+        else:
             print("No está regitrado")
-    elif msg.topic == 'SI/Easyrun/Prestar':
-        a = 1
-    elif msg.topic == 'SI/Easyrun/Devolver':
-        a = 2
-    elif msg.topic == 'SI/Easyrun/Distribuir':
-        a = 3
+    elif msg.topic == 'SI/Easymeals/CurrentTurn':
+        print("Turn required")
+        (rc, mid)= client.publish(msg.topic,json.dumps(t),qos = 1) # Returns t dictionary
+    else:
+        print("Incorrect Topic")
 
 
 
@@ -65,8 +71,7 @@ client.on_publish = on_publish
 
 # subscribe to all topics of encyclopedia by using the wildcard "#"
 client.subscribe("SI/Validar", qos=1)
-client.subscribe("SI/Esayrun/#", qos=1)
-
+client.subscribe("SI/Esaymeals/#", qos=1)
 client.loop_start()
 
 
@@ -74,5 +79,5 @@ while True:
     #(rc, mid) = client.publish("SI/Validar", "False", qos=1)
     #time.sleep(5)
     #(rc, mid) = client.publish("notification/holu", "100", qos = 1)
-    client.on_message = on_message 
+    client.on_message = on_message
     time.sleep(5)

@@ -3,7 +3,7 @@ from MQTTconnection import *
 client_id = "ESP32"
 #mqtt_server = "778209500d2e429395808690733dbd2a.s1.eu.hivemq.cloud"
 mqtt_server = "broker.mqttdashboard.com"
-user_mqtt = "JuanFelipe"
+user_mqtt = "LauraM"
 password_mqtt = "xr8_G!pQiw2R6fC"
 
 #topic_sub = b'notification'
@@ -11,7 +11,7 @@ password_mqtt = "xr8_G!pQiw2R6fC"
 last_message = 0
 message_interval = 2
 received = True
-ID = b'CH10537T'
+ID = b'CC10100' # ID received from keyboard
 
 #conect_to("Juan F","qwertyuiop")
 conect_to("Carlos Mario Gonzalez","Carmar15")
@@ -21,6 +21,7 @@ try:
 except OSError as e:
   restart_and_reconnect()
 
+# Sents ID to SI/Validar topic again and again
 while True:
   try:
     #client.check_msg()
@@ -29,7 +30,7 @@ while True:
             client.publish(b'SI/Validar', ID,True,1)
             received = False
         else:
-            client.set_callback(sub_cb)
+            client.set_callback(sub_cb) #sub_cb declared in MQTTconnection.py as a method
             received = True
         last_message = time.time()
         """client.publish(b'SI/Validar', ID)
