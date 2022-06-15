@@ -1,15 +1,16 @@
 import time
+import machine
 from umqttsimple import MQTTClient
-from machine import *
+from machine import Pin
 import network as nt
 import json
 
 
 client_id = "ESP32"
 #mqtt_server = "778209500d2e429395808690733dbd2a.s1.eu.hivemq.cloud"
-mqtt_server = "broker.mqttdashboard.com"
-user_mqtt = "JuanFelipe"
-password_mqtt = "xr8_G!pQiw2R6fC"
+mqtt_server = "broker.hivemq.com"
+user_mqtt = "LA.CONSENTIDA"
+password_mqtt = "13g8o5l3d21"
 
 #topic_sub = b'notification'
 
@@ -25,6 +26,8 @@ def conect_to(SSID, PASSWORD):
         led = Pin(2,Pin.OUT)
         if not sta_if.isconnected():
             sta_if.active(True)
+            print("Network name: ", SSID)
+            print('Password: ', PASSWORD)
             sta_if.connect(SSID,PASSWORD)
             print("Trying to connect to the network: ",SSID)
             while nt.isconnected() == False:
@@ -36,7 +39,7 @@ def conect_to(SSID, PASSWORD):
 
 def sub_cb(topic, msg):
     msg_dec =  json.loads(msg)
-    if topic == b'SI/Validar':
+    if topic == b'SI/Petition':
         #print('El mensaje es del tema %s,  mensaje %s',topic,msg)
         print(msg_dec)
         print(type(msg_dec))
@@ -44,15 +47,15 @@ def sub_cb(topic, msg):
         #print('El mensaje es del tema %s,  mensaje %s',topic,msg)
         print(msg_dec)
     else:
-        print('No llegó nada unu')
+        print('No llega nada')
 
 
 def connect_and_subscribe():
     global client_id, mqtt_server
-    client = MQTTClient(client_id,"broker.mqttdashboard.com")
+    client = MQTTClient(client_id,mqtt_server)
     client.connect()
     client.set_callback(sub_cb)
-    client.subscribe(b'SI/Validar',1)
-    client.subscribe(b'SI/Easyrun/#',1)
+    client.subscribe(b'SI/Petition',1)
+    client.subscribe(b'SI/Easymeals/#',1)
     print('Connected to %s MQTT broker' % (mqtt_server))
     return client
