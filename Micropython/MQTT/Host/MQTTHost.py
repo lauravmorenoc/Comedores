@@ -14,6 +14,13 @@ usersData={
     "Rol":"Student"
     }
 
+def extract_dict_data(dictionary, key='LocalID'): # Key is a string
+    result=[]
+    for x in range(len(list(dictionary.items()))):
+        if list(dictionary.items())[x-1][0]==key:
+            result=list(dictionary.items())[x-1]
+    return result
+
 def on_connect(client, userdata, flags, rc, properties=None): # rc=0 means everything is right, else do worry
     print("Connected with result code "+str(rc))
 
@@ -24,15 +31,40 @@ def on_subscribe(client, userdata, mid, granted_qos, properties=None):
     print("Subscribed: " + str(mid) + " " + str(granted_qos))
 
 def on_message(client, userdata, msg):
-    print("Received: "+msg.topic+" "+str(msg.payload))
-    if msg.topic=='SI/Petition':
-        message=json.loads(msg.payload)
-       # print('Arrival text', message, 'Type: ', type(message))
-       # print('Local text', usersID[0], 'Type: ', type(usersID[0]))
+  #  print("Received: "+msg.topic+" "+str(msg.payload))
+    message=json.loads(msg.payload)
+    print('Received: ' + str(list(message.items())))
+    try:
+        externalID=extract_dict_data(message,'LocalID')[1]
+    except IndexError as e:
+        print('Error: message contains no local ID')
+        print('I give up')
+        pass
+    print ('Reading LocalID: ' + str(extract_dict_data(message,'LocalID')[1]))
+    if externalID!=str(1):
+        print('External type: ',type(externalID))
+        print('Reference type: ',type(1))
+        print('Just like God says')
+        if msg.topic=='SI/Petition':
+            try:
+                userID=extract_dict_data(message,'ID')[1]
+                if userID in usersID:
+                    print('User found')
+                    client.publish('SI/Petition', json.dumps(usersData),True,0)
+            except IndexError as e:
+                print('Error: message contains no user ID')
+                print('I give up')
+                pass
+            
+    else:
+        print('I dont really care')
+        
+        '''
         if message in usersID:
             print('User found')
             #client.publish(b'SI/Petition', json.dumps(usersData),qos= 1)
             client.publish('SI/Petition', json.dumps(usersData),True,0)
+        '''
           #  (rc, mid)= 
         #else:
          #   client.publish('SI/Petition', json.dumps('Not found'),True,0)
