@@ -21,11 +21,14 @@ COMM=Communications()
 sim_ticket=0
 
 last_publish_time = 0
-message_interval = 1 # in seconds
+message_interval = 2 # in seconds
 refresh = True
 
 while True:    
     
+    COMM.check_message()
+    
+    #### Función para simular avance de turnos, se puede quitar
     try:
         if (time.time() - last_publish_time) > message_interval:
             if refresh:
@@ -38,7 +41,7 @@ while True:
             last_publish_time = time.time()
     except OSError as e:
         print('Unable to connect. Please restart device.')
-    
+    ####
     
     # Receive messages
     topic, message, pending_incoming_message=COMM.receive()
