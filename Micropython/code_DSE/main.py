@@ -18,22 +18,21 @@ disp.printText('Ticket: ', vspace=1, hspace=8)
 
 COMM=Communications()
 
-global ticket
-ticket=0
+sim_ticket=0
 
 last_publish_time = 0
-message_interval = 10 # in seconds
+message_interval = 1 # in seconds
 refresh = True
 
-while True:
-    global ticket
-    
+while True:    
     
     try:
         if (time.time() - last_publish_time) > message_interval:
             if refresh:
-                COMM.send(topic='SI/Petition')
+                #COMM.send(topic='SI/Petition')
+                COMM.send(topic='Easymeals/Update', ticket=sim_ticket)
                 refresh = False
+                sim_ticket+=1
             else:
                 refresh = True
             last_publish_time = time.time()
@@ -61,14 +60,18 @@ while True:
             COMM.pending_incoming_message=False
         elif str(topic,'utf-8')=='Easymeals/Update':
             ticket=message["ticket"]
+            disp.printText('    ', vspace=3, hspace=11)
             disp.printText(str(ticket), vspace=3, hspace=11)
             
             # Delete last users'data from display
-            disp.printText('     ', vspace=5, hspace=1)
-            disp.printText('                    ', vspace=6, hspace=1)
+            disp.printText('      ', vspace=5, hspace=1)
+            disp.printText('                     ', vspace=6, hspace=1)
             disp.printText('    ', vspace=8, hspace=1)
             disp.printText('    Welcome', vspace=9, hspace=1)
-            disp.printText('                    ', vspace=11, hspace=1)
+            disp.printText('                     ', vspace=11, hspace=1)
             disp.printText('     ', vspace=12, hspace=8)
             
             # Poner aquí función de que se reproduzca en audio
+            
+        
+    # Sent messages
