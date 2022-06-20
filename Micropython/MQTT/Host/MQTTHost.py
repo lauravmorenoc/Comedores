@@ -10,6 +10,7 @@ for x in range(len(usersID)):
 
 usersData={
     "LocalID":"1",
+    "Registered": True,
     "Name":"Laura",
     "Rol":"Student"
     }
@@ -33,31 +34,49 @@ def on_subscribe(client, userdata, mid, granted_qos, properties=None):
 def on_message(client, userdata, msg):
   #  print("Received: "+msg.topic+" "+str(msg.payload))
     message=json.loads(msg.payload)
-    print('Received: ' + str(list(message.items())))
+    print('Received: ' + str(list(message.items())) + '. On topic: ' + msg.topic)
     try:
         externalID=extract_dict_data(message,'LocalID')[1]
     except IndexError as e:
         print('Error: message contains no local ID')
         print('I give up')
         pass
-    print ('Reading LocalID: ' + str(extract_dict_data(message,'LocalID')[1]))
+    #print ('Reading LocalID: ' + str(extract_dict_data(message,'LocalID')[1]))
     if externalID!=str(1):
-        print('External type: ',type(externalID))
-        print('Reference type: ',type(1))
-        print('Just like God says')
         if msg.topic=='SI/Petition':
+            data={"LocalID":"1"}
+            client.publish(msg.topic, json.dumps(data),True,1)
+            print('Sent: ', data, '. Topic: ', msg.topic, '\n')
+        elif msg.topic=='Easymeals/Payment':
             try:
                 userID=extract_dict_data(message,'ID')[1]
                 if userID in usersID:
                     print('User found')
-                    client.publish('SI/Petition', json.dumps(usersData),True,0)
+                    usersData["Registered"] = True
+                else:
+                    usersData["Registered"] = False
+                client.publish(msg.topic, json.dumps(usersData),True,1)
+                print('Sent: ', usersData, '. Topic: ', msg.topic, '\n')
+
             except IndexError as e:
                 print('Error: message contains no user ID')
                 print('I give up')
                 pass
+        elif msg.topic=='Easymeals/Update':
+            try:
+                ticket=message["ticket"]
+                data={"LocalID":"1",
+                      "ticket":ticket
+                      }
+                client.publish(msg.topic, json.dumps(data),True,1)
+            except KeyError as e:
+                print('Error: message contains no ticket')
+                print('I give up')
+                pass
+            print('Sent: ', usersData, '. Topic: ', msg.topic, '\n')
             
     else:
-        print('I dont really care')
+        print('I dont really care \n')
         
         '''
         if message in usersID:
