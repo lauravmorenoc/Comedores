@@ -23,6 +23,9 @@ class Communications:
             self.last_pending=False
         except OSError as e:
             restart_and_reconnect()
+            
+    def check_message(self):
+        self.client.check_msg()
 
     def receive(self):
         topic, message = getValues()
