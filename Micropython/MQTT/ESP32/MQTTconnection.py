@@ -8,7 +8,8 @@ import json
 
 client_id = "ESP32"
 #mqtt_server = "778209500d2e429395808690733dbd2a.s1.eu.hivemq.cloud"
-mqtt_server = "broker.hivemq.com"
+#mqtt_server = "broker.hivemq.com"
+mqtt_server = "192.168.3.1"
 user_mqtt = "LauraM"
 password_mqtt = "13g8o5l3d21"
 

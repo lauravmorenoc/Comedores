@@ -6,10 +6,10 @@ class Communications:
     def __init__(self):
 
         # WLAN network
-        net_name = "LA.CONSENTIDA"
-        net_password = "13g8o5l3d21"
-        #net_name = "UNAL"
-        #net_password = ""
+        #net_name = "LA.CONSENTIDA"
+        #net_password = "13g8o5l3d21"
+        net_name = "Omega-9523"
+        net_password = "12345678"
 
         conect_to(net_name,net_password)
 
@@ -23,10 +23,10 @@ class Communications:
             self.last_pending=False
         except OSError as e:
             restart_and_reconnect()
-            
+
     def check_message(self):
         self.client.check_msg()
-
+    
     def receive(self):
         topic, message = getValues()
         if self.pending_incoming_message==False and  self.pending_incoming_message!=self.last_pending:
@@ -59,6 +59,8 @@ class Communications:
         elif topic=='SI/Petition':
             print('Loop SI availability secured', '\n')
             self.client.publish('SI/Petition', json.dumps(data),True,1)
+        elif topic=='TEMPERATURE':
+            self.client.publish('TEMPERATURE', 'Holi',True,1)
         else:
             print('Misstyped topic')
         

@@ -24,6 +24,17 @@ last_publish_time = 0
 message_interval = 2 # in seconds
 refresh = True
 comedor=1
+cash_register_on=False
+ID=''
+IDcounter=0
+
+def char_type(char):
+    if char=='1' or char=='2' or char=='3' or char=='4' or char=='5' or char=='6' or char=='7' or char=='8' or char=='9' or char=='0':
+        return 'Number'
+    elif char=='A': #Asterisco
+        return 'Ast'
+    elif char=='B': #Numeral
+        return 'Sharp'
 
 while True:    
     
@@ -35,6 +46,7 @@ while True:
             if refresh:
                 #COMM.send(topic='SI/Petition')
                 COMM.send(topic='Easymeals/Update', ticket=sim_ticket, comedor=comedor)
+                #COMM.send(topic='TEMPERATURE')
                 refresh = False
                 sim_ticket+=1
             else:
@@ -44,7 +56,7 @@ while True:
         print('Unable to connect. Please restart device.')
     ####
     
-    # Receive messages
+# Receive messages
     topic, message, pending_incoming_message=COMM.receive()
     if pending_incoming_message==True:
         if str(topic,'utf-8')=='Easymeals/Payment':
@@ -61,20 +73,22 @@ while True:
                     Payment=7900 # Cambiar si incorrecto
                 disp.printText('Total amount to pay: ', vspace=11, hspace=1)
                 disp.printText('$'+str(Payment), vspace=12, hspace=8)
+                cash_register_on=True
             else:
                 disp.printText('User not registered', vspace=5, hspace=3)
-        #COMM.pending_incoming_message=False
+                cash_register_on=False
         elif str(topic,'utf-8')=='Easymeals/Update':
             if message["Comedor"]==comedor:
                 ticket=message["ticket"]
                 disp.printText('    ', vspace=3, hspace=11)
                 disp.printText(str(ticket), vspace=3, hspace=11)
+                cash_register_on=False
                 
                 # Delete last users'data from display
                 disp.printText('      ', vspace=5, hspace=1)
                 disp.printText('                     ', vspace=6, hspace=1)
-                disp.printText('    ', vspace=8, hspace=1)
-                disp.printText('    Welcome', vspace=9, hspace=1)
+                disp.printText('Digite su numero de identificacion:', vspace=8, hspace=1)
+                disp.printText('            ', vspace=9, hspace=1)
                 disp.printText('                     ', vspace=11, hspace=1)
                 disp.printText('     ', vspace=12, hspace=8)
                 
@@ -84,3 +98,26 @@ while True:
             
         
     # Sent messages
+    
+    # La función de Juan debe tener un print. Cambiar ese print por, considerando 'out' lo que se imprime:
+
+
+    if !cash_register_on: # Awaiting to get key from keyboard
+        if char_type(out) =='Number':
+            disp.printText(out,vspace=9, hspace=IDcounter)
+            ID=ID+out
+            IDcounter+=1
+
+        elif char_type(out) =='Ast':
+            disp.printText(' ' ,vspace=9, hspace=IDcounter-1)
+            ID=ID[0:len(ID)-1] # verificar
+            IDcounter-=1
+
+        elif char_type(out) =='Sharp':
+            try:
+                COMM.send(topic='Easymeals/Payment', userID=ID)
+                print('Sending ID to SI')
+                cash_register_on=True
+            except OSError as e:
+                print('OSError: Unable to send ID')
+
