@@ -10,7 +10,7 @@ import math
 import os
 
 
-sck=22
+sck=12
 mosi=19
 miso=23
 
@@ -73,16 +73,20 @@ def button_verify():
             print(local_ticket)
         else:
             local_ticket = local_ticket+1
-            led.value(1)
             print("else")
             print(local_ticket)
     
 
 while True:    
     
-    COMM.check_message()
+    try:
+        COMM.send(topic='Easymeals/Update', ticket=10, comedor=1)
+    except OSError as e:
+        print('OSError: Unable to sent anything')
     
+    #COMM.check_message()
     #### Función para simular avance de turnos, se puede quitar
+    '''
     try:
         if (time.time() - last_publish_time) > message_interval:
             if refresh:
@@ -96,6 +100,7 @@ while True:
             last_publish_time = time.time()
     except OSError as e:
         print('Unable to connect. Please restart device.')
+    '''
     ####
 
 # Send messages
@@ -103,11 +108,11 @@ while True:
     button_verify()
     if local_ticket!=last_ticket:
         try:
-            COMM.send(topic='Easymeals/Update', ticket=sim_ticket, comedor=comedor)
+            COMM.send(topic='Easymeals/Update', ticket=local_ticket, comedor=comedor)
         except OSError as e:
             print('OSError: Unable to sent ticket update. Please restart device.')
         last_ticket=local_ticket
-    
+        
     
 # Receive messages
     topic, message, pending_incoming_message=COMM.receive()
@@ -137,18 +142,19 @@ while True:
                 disp.printText(str(ticket), vspace=3, hspace=11)
                 cash_register_on=False
                 
+                
                 wp.play("turno.wav", loop= False)
                 done_deleting=False
-                while wp.isplaying() == True or done_deleting==False:
-                    # Delete last users'data from display
-                    disp.printText('      ', vspace=5, hspace=1)
-                    disp.printText('                     ', vspace=6, hspace=1)
-                    disp.printText('Digite su numero de identificacion:', vspace=8, hspace=1)
-                    disp.printText('            ', vspace=9, hspace=1)
-                    disp.printText('                     ', vspace=11, hspace=1)
-                    disp.printText('     ', vspace=12, hspace=8)
-                    done_deleting==True
+                print('Indicador')
+                while wp.isplaying() == True:
                     pass
+                
+                disp.printText('      ', vspace=5, hspace=1)
+                disp.printText('                     ', vspace=6, hspace=1)
+                disp.printText('Digite su numero de identificacion:', vspace=8, hspace=1)
+                disp.printText('            ', vspace=9, hspace=1)
+                disp.printText('                     ', vspace=11, hspace=1)
+                disp.printText('     ', vspace=12, hspace=8)
                 
                 num_file = str(ticket) + ".wav"
                 
