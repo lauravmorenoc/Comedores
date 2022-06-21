@@ -66,7 +66,8 @@ def on_message(client, userdata, msg):
             try:
                 ticket=message["ticket"]
                 data={"LocalID":"1",
-                      "ticket":ticket
+                      "ticket":ticket,
+                      "Comedor": 1
                       }
                 client.publish(msg.topic, json.dumps(data),True,1)
             except KeyError as e:

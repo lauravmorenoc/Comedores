@@ -37,7 +37,7 @@ class Communications:
         self.last_pending=self.pending_incoming_message
         return topic, message, self.pending_incoming_message
 
-    def send(self, topic, userID='', ticket=0):
+    def send(self, topic, userID='', ticket=0, comedor=1):
         data={'LocalID':self.localID,
             'group': 3
             }
@@ -50,7 +50,8 @@ class Communications:
         elif topic=='Easymeals/Update':
             data={
             'LocalID':self.localID,
-            'ticket': ticket
+            'ticket': ticket,
+            'Comedor':comedor
             }
             if ticket!=0:
                 self.ticket=ticket

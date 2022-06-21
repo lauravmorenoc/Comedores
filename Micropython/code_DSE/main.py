@@ -23,6 +23,7 @@ sim_ticket=0
 last_publish_time = 0
 message_interval = 2 # in seconds
 refresh = True
+comedor=1
 
 while True:    
     
@@ -33,7 +34,7 @@ while True:
         if (time.time() - last_publish_time) > message_interval:
             if refresh:
                 #COMM.send(topic='SI/Petition')
-                COMM.send(topic='Easymeals/Update', ticket=sim_ticket)
+                COMM.send(topic='Easymeals/Update', ticket=sim_ticket, comedor=comedor)
                 refresh = False
                 sim_ticket+=1
             else:
@@ -47,34 +48,39 @@ while True:
     topic, message, pending_incoming_message=COMM.receive()
     if pending_incoming_message==True:
         if str(topic,'utf-8')=='Easymeals/Payment':
-            Name=message["Name"]
-            Rol=message["Rol"]
-            disp.printText('Name:', vspace=5, hspace=1)
-            disp.printText(Name, vspace=6, hspace=1)
-            disp.printText('Rol:', vspace=8, hspace=1)
-            disp.printText(Rol, vspace=9, hspace=1)
-            # Cuando se actualice el turno borrar nombre de persona y poner "bienvenido"
-            if Rol=='Student':
-                Payment=5900 
+            if message["Registered"]:
+                Name=message["Name"]
+                Rol=message["Rol"]
+                disp.printText('Name:', vspace=5, hspace=1)
+                disp.printText(Name, vspace=6, hspace=1)
+                disp.printText('Rol:', vspace=8, hspace=1)
+                disp.printText(Rol, vspace=9, hspace=1)
+                if Rol=='Student':
+                    Payment=5900 
+                else:
+                    Payment=7900 # Cambiar si incorrecto
+                disp.printText('Total amount to pay: ', vspace=11, hspace=1)
+                disp.printText('$'+str(Payment), vspace=12, hspace=8)
             else:
-                Payment=7900 # Cambiar si incorrecto
-            disp.printText('Total amount to pay: ', vspace=11, hspace=1)
-            disp.printText('$'+str(Payment), vspace=12, hspace=8)
-            COMM.pending_incoming_message=False
+                disp.printText('User not registered', vspace=5, hspace=3)
+        #COMM.pending_incoming_message=False
         elif str(topic,'utf-8')=='Easymeals/Update':
-            ticket=message["ticket"]
-            disp.printText('    ', vspace=3, hspace=11)
-            disp.printText(str(ticket), vspace=3, hspace=11)
+            if message["Comedor"]==comedor:
+                ticket=message["ticket"]
+                disp.printText('    ', vspace=3, hspace=11)
+                disp.printText(str(ticket), vspace=3, hspace=11)
+                
+                # Delete last users'data from display
+                disp.printText('      ', vspace=5, hspace=1)
+                disp.printText('                     ', vspace=6, hspace=1)
+                disp.printText('    ', vspace=8, hspace=1)
+                disp.printText('    Welcome', vspace=9, hspace=1)
+                disp.printText('                     ', vspace=11, hspace=1)
+                disp.printText('     ', vspace=12, hspace=8)
+                
+                # Poner aquí función de que se reproduzca en audio
             
-            # Delete last users'data from display
-            disp.printText('      ', vspace=5, hspace=1)
-            disp.printText('                     ', vspace=6, hspace=1)
-            disp.printText('    ', vspace=8, hspace=1)
-            disp.printText('    Welcome', vspace=9, hspace=1)
-            disp.printText('                     ', vspace=11, hspace=1)
-            disp.printText('     ', vspace=12, hspace=8)
-            
-            # Poner aquí función de que se reproduzca en audio
+        COMM.pending_incoming_message=False    
             
         
     # Sent messages
