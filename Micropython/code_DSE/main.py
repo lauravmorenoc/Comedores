@@ -7,10 +7,17 @@ from xglcd_font import XglcdFont
 from machine import SoftSPI
 from wavplayer import WavPlayer
 import math
+<<<<<<< HEAD
 import os
 
 
 sck=12
+=======
+from wavplayer import WavPlayer
+import os
+
+sck=5
+>>>>>>> main
 mosi=19
 miso=23
 
@@ -31,11 +38,21 @@ cash_register_on=False
 ID=''
 IDcounter=0
 
+<<<<<<< HEAD
+=======
+
+##
+
+>>>>>>> main
 SCK_PIN = 26 #32
 WS_PIN = 22 #25
 SD_PIN = 21 #33
 I2S_ID = 0
 BUFFER_LENGTH_IN_BYTES = 5000
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 global local_ticket
 local_ticket=0
 last_ticket=0
@@ -48,7 +65,11 @@ wp = WavPlayer(id=I2S_ID,
 #---- AUDIO CONFIG
 
 push_button = Pin(25, Pin.IN)  # 23 number pin is input
+<<<<<<< HEAD
 bw_button = Pin(23, Pin.IN) 
+=======
+bw_button = Pin(27, Pin.IN) 
+>>>>>>> main
 
 def char_type(char):
     if char=='1' or char=='2' or char=='3' or char=='4' or char=='5' or char=='6' or char=='7' or char=='8' or char=='9' or char=='0':
@@ -75,7 +96,10 @@ def button_verify():
             local_ticket = local_ticket+1
             print("else")
             print(local_ticket)
+<<<<<<< HEAD
     
+=======
+>>>>>>> main
 
 while True:    
     
@@ -91,10 +115,11 @@ while True:
         if (time.time() - last_publish_time) > message_interval:
             if refresh:
                 #COMM.send(topic='SI/Petition')
-                COMM.send(topic='Easymeals/Update', ticket=sim_ticket, comedor=comedor)
+                #COMM.send(topic='Easymeals/Update', ticket=sim_ticket, comedor=comedor)
                 #COMM.send(topic='TEMPERATURE')
                 refresh = False
-                sim_ticket+=1
+                #sim_ticket+=1
+                local_ticket+=1
             else:
                 refresh = True
             last_publish_time = time.time()
@@ -114,6 +139,18 @@ while True:
         last_ticket=local_ticket
         
     
+    
+# Send messages
+    button_verify()
+    
+    if local_ticket!=last_ticket:
+        try:
+            COMM.send(topic='Easymeals/Update', ticket=local_ticket, comedor=comedor)
+        except OSError as e:
+            print('OSError: Unable to sent ticket update. Please restart device.')
+        last_ticket=local_ticket
+
+
 # Receive messages
     topic, message, pending_incoming_message=COMM.receive()
     if pending_incoming_message==True:
@@ -142,6 +179,7 @@ while True:
                 disp.printText(str(ticket), vspace=3, hspace=11)
                 cash_register_on=False
                 
+<<<<<<< HEAD
                 
                 wp.play("turno.wav", loop= False)
                 done_deleting=False
@@ -149,15 +187,27 @@ while True:
                 while wp.isplaying() == True:
                     pass
                 
+=======
+                wp.play("turno.wav", loop= False)
+                while wp.isplaying() == True:
+                    pass
+                
+                # Delete last users'data from display
+>>>>>>> main
                 disp.printText('      ', vspace=5, hspace=1)
                 disp.printText('                     ', vspace=6, hspace=1)
-                disp.printText('Digite su numero de identificacion:', vspace=8, hspace=1)
                 disp.printText('            ', vspace=9, hspace=1)
+                disp.printText('Digite su numero de identificacion:', vspace=8, hspace=1)
                 disp.printText('                     ', vspace=11, hspace=1)
-                disp.printText('     ', vspace=12, hspace=8)
+                disp.printText('      ', vspace=12, hspace=8)
                 
                 num_file = str(ticket) + ".wav"
                 
+<<<<<<< HEAD
+                num_file = str(ticket) + ".wav"
+                
+=======
+>>>>>>> main
                 if ticket <= 9:
                     wp.play(num_file, loop= False)
                     while wp.isplaying() == True: 
@@ -181,7 +231,11 @@ while True:
     
     # La función de Juan debe tener un print. Cambiar ese print por, considerando 'out' lo que se imprime:
 
+<<<<<<< HEAD
 '''
+=======
+    '''
+>>>>>>> main
     if !cash_register_on: # Awaiting to get key from keyboard
         if char_type(out) =='Number':
             disp.printText(out,vspace=9, hspace=IDcounter)
@@ -200,4 +254,8 @@ while True:
                 cash_register_on=True
             except OSError as e:
                 print('OSError: Unable to send ID')
+<<<<<<< HEAD
 '''
+=======
+    '''
+>>>>>>> main

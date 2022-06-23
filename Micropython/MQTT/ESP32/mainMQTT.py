@@ -6,10 +6,12 @@ class Communications:
     def __init__(self):
 
         # WLAN network
-        #net_name = "LA.CONSENTIDA"
-        #net_password = "13g8o5l3d21"
-        net_name = "Omega-9523"
-        net_password = "12345678"
+        net_name = "LA.CONSENTIDA"
+        net_password = "13g8o5l3d21"
+        #net_name = "Omega-9523"
+        #net_password = "12345678"
+        #net_name = "UNAL"
+        #net_password = ""
 
         conect_to(net_name,net_password)
 
