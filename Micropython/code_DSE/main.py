@@ -52,14 +52,68 @@ wp = WavPlayer(id=I2S_ID,
 #---- AUDIO CONFIG
 
 push_button = Pin(25, Pin.IN)  # 23 number pin is input
-bw_button = Pin(27, Pin.IN) 
+bw_button = Pin(27, Pin.IN)
+
+
+
+
+
+## TECLADO ##
+TECLA_ARRIBA  = const(0)
+TECLA_ABAJO = const(1)
+
+teclas = [['1', '2', '3', 'A'], ['4', '5', '6', 'B'], ['7', '8', '9', 'C'], ['*', '0', '#', 'D']]
+
+# Pines del GPIO  
+filas = [23,22,21,19] 
+columnas = [18,34,35,12] 
+
+# define los pines de filas como salidas
+fila_pines = [Pin(nombre_pin, mode=Pin.OUT) for nombre_pin in filas]
+
+# define los pines de columnas como entradas
+columna_pines = [Pin(nombre_pin, mode=Pin.IN, pull=Pin.PULL_DOWN) for nombre_pin in columnas]
+
+def tec_init():
+    for fila in range(0,4):
+        for columna in range(0,4):
+            fila_pines[fila].low()
+    print("Teclado en espera")
+
+
+def scan(fila, columna):
+    """ escanea todo el teclado """
+
+    # define la columna actual en alto -high-
+    fila_pines[fila].high()
+    tecla = None
+
+    # verifica por teclas si hay teclas presionadas
+    if columna_pines[columna].value() == TECLA_ABAJO:
+        tecla = TECLA_ABAJO
+    if columna_pines[columna].value() == TECLA_ARRIBA:
+        tecla = TECLA_ARRIBA
+    fila_pines[fila].low()
+
+    # devuelve el estado de la tecla
+    return tecla
+
+# define todas las columnas bajo -low-
+tec_init()
+
+
+
+
+
+
+
 
 def char_type(char):
     if char=='1' or char=='2' or char=='3' or char=='4' or char=='5' or char=='6' or char=='7' or char=='8' or char=='9' or char=='0':
         return 'Number'
-    elif char=='A': #Asterisco
+    elif char=='*': #Asterisco
         return 'Ast'
-    elif char=='B': #Numeral
+    elif char=='#': #Numeral
         return 'Sharp'
     
 def button_verify():
@@ -176,7 +230,14 @@ while True:
     
     # La función de Juan debe tener un print. Cambiar ese print por, considerando 'out' lo que se imprime:
 
-    '''
+    
+    for fila in range(4):
+        for columna in range(4):
+            tecla = scan(fila, columna)
+            if tecla == TECLA_ABAJO:
+                print("Tecla Presionada", teclas[fila][columna])
+                out=teclas[fila][columna]
+    
     if !cash_register_on: # Awaiting to get key from keyboard
         if char_type(out) =='Number':
             disp.printText(out,vspace=9, hspace=IDcounter)
@@ -195,4 +256,4 @@ while True:
                 cash_register_on=True
             except OSError as e:
                 print('OSError: Unable to send ID')
-    '''
+    
